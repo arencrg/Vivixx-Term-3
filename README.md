@@ -1,10 +1,10 @@
-### TERM 3 PROJECTS
+# TERM 3 PROJECTS
 
 These are my little projects for the third term of the Vivixx Coding Bootcamp, which focuses on Javascript.
 
 ## WEEK 1
 
-# DAY 1
+### DAY 1
 
 - day 1-1.html -> date printer
 
@@ -23,7 +23,7 @@ These are my little projects for the third term of the Vivixx Coding Bootcamp, w
 - day1challenge.html -> blogger tool, where to eat + generate the hashtag
 
 
-# DAY 2
+### DAY 2
 
 - day2challenge1.html -- JavaScript30 Challenge from Wes Bos -> drum kit
 
