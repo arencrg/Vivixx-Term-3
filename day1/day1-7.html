@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>Exercise 7</title>
+</head>
+<body>
+<h3>Javascript Day 1, Exercise 7: How many vowels??</h3>
+
+  Input string here:<br/>
+  <form>
+  <input type="text" id="str"/><br/>
+  <input type="button" onclick="countVowels()" value = "Remove the vowels!"/>
+  <p id = "resultone"></p>
+  <p id = "resulttwo"></p>
+  </form>
+
+<script>
+function countVowels()
+{
+  x = document.getElementById("str").innerHTML.length
+  y = document.getElementById("str").innerHTML.replace(/[aeiou]/gi, "").length;
+  z = document.getElementById("str").innerHTML.replace(/[aeiou]/gi, "");
+  document.getElementById("resultone").innerHTML = x-y;
+  document.getElementById("resulttwo").innerHTML = z;
+}
+</script>
+
+</body>
+</html>

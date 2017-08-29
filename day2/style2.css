@@ -1,0 +1,71 @@
+body {
+  background: url("assets/bg.jpg");
+  color: white;
+  width: 100%;
+  background-size: 100%;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.keys {
+  margin-top: 5%;
+}
+
+.key {
+  transform: scale(1);
+  width: 8.5%;
+  float: left;
+  margin: 5px 15px 5px 15px;
+}
+.troops {
+  width: 60px;
+  display: inline-block;
+  text-align: center;
+}
+.playing {
+  transform: scale(1.1);
+  border-color: #ffc600;
+}
+
+
+#time {
+  width: 160px;
+  height: 160px;
+}
+
+.clock {
+  margin:20px auto;
+  position: relative;
+  padding: 2rem;
+  background: url("assets/circlethingy.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  align-items: center;
+}
+
+.hand {
+  width:36%;
+  height:6px;
+  background:#e5b13a;
+  position: absolute;
+  top:50%;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.second-hand {
+  width:36%;
+  height:3px;
+  background:#e5b13a;
+  position: absolute;
+  top:50%;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
