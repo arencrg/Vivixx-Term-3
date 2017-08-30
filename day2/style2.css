@@ -1,3 +1,5 @@
+
+
 body {
   background: url("assets/bg.jpg");
   color: white;
@@ -36,7 +38,8 @@ body {
 }
 
 .clock {
-  margin:20px auto;
+  margin:10px auto;
+  height: 60%;
   position: relative;
   padding: 2rem;
   background: url("assets/circlethingy.png");
@@ -46,9 +49,23 @@ body {
   align-items: center;
 }
 
-.hand {
-  width:36%;
-  height:6px;
+.hour-hand {
+  width:35%;
+  left: 15%;
+  height:7px;
+  background:#e5b13a;
+  position: absolute;
+  top:50%;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.min-hand {
+  width:45%;
+  left: 5%;
+  height:5px;
   background:#e5b13a;
   position: absolute;
   top:50%;
@@ -59,7 +76,8 @@ body {
 }
 
 .second-hand {
-  width:36%;
+  width:45%;
+  left: 5%;
   height:3px;
   background:#e5b13a;
   position: absolute;
@@ -68,4 +86,19 @@ body {
   transform: rotate(90deg);
   transition: all 0.05s;
   transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+
+
+@media only screen and (max-width 767px) {
+
+
+  body {
+    background: url("assets/bgtall.jpg") black no-repeat;
+    color: white;
+    width: 100% !important;
+    text-align: center;
+  }
+
+
 }
