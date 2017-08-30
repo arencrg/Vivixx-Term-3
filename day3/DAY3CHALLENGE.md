@@ -14,10 +14,7 @@ However, libraries aren't always what you're looking for (or you may not be look
 
 # Okay, libraries sound cool and I think I need to use one. Any suggestions?
 
-![Create.js Logo](http://createjs.com/assets/images/svg/createjs-logo-vertical-gray-darker.svg)
-<h3 align = "center"><a href = "http://www.createjs.com/"> <img height="200px" src="http://createjs.com/assets/images/svg/createjs-logo-vertical-gray-darker.svg"> </a> </h3>
-
-#### 1. [Create.js](http://www.createjs.com/)
+<h3 align = "center"><a href = "http://www.createjs.com/"> <img height="400px" src="http://createjs.com/assets/images/svg/createjs-logo-vertical-gray-darker.svg"> </a> </h3>
 
 Create.js is a collection of libraries and tools to build rich interactive web content. The main products of CreateJS are the following:
 
@@ -33,9 +30,7 @@ CreateJS is also sponsored by Adobe, Microsoft, mozilla, and gskinner.
 
 
 ------
-
-
-![EaselJS](http://www.createjs.com/docs/easeljs/assets/docs-icon-EaselJS.png)
+<h3 align = "center"><a href = "https://github.com/CreateJS/EaselJS"> <img height = "200px" src = "http://www.createjs.com/docs/easeljs/assets/docs-icon-EaselJS.png"> </a> </h3>
 
 EaselJS is a library for building high-performance interactive 2D content in HTML5. It provides a feature-rich display list to allow you to manipulate and animate graphics. It also provides a robust interactive model for mouse and touch interactions. It is used in building games, generative art, ads, data visualization, and other highly graphical experiences.
 
@@ -50,7 +45,7 @@ Below is a quick example of how to use the EaselJS:
 The example above will simply build a red square `shape` on `stage`, which is a Stage on the HTML canvas `myCanvas`.
 
 
-![TweenJS](http://createjs.com/docs/tweenjs/assets/docs-icon-TweenJS.png)
+<h3 align = "center"><a href = "https://github.com/CreateJS/TweenJS"> <img height = "200px" src = "http://createjs.com/docs/tweenjs/assets/docs-icon-TweenJS.png"> </a> </h3>
 
 The TweenJS API makes it easy to create complex tweens by chaining commands.
 
@@ -67,8 +62,7 @@ The example above will create a new tween instance that:
 - tweens the target's alpha to 0 over 1s & sets its visible to false
 - calls the onComplete function
 
-
-![SoundJS](http://createjs.com/docs/soundjs/assets/docs-icon-SoundJS.png)
+<h3 align = "center"><a href = "https://github.com/CreateJS/SoundJS"> <img height = "200px" src = "http://createjs.com/docs/soundjs/assets/docs-icon-SoundJS.png"> </a> </h3>
 
 SoundJS is a library to make working with audio on the web easier. It provides a consistent API for playing audio in different browsers. A mechanism has been provided for easily tying in audio preloading to PreloadJS.
 
@@ -84,7 +78,7 @@ Below is a simple example:
 
 The example above will install audio playback Plugins, register `mySound.ogg`, and control the volume to play a song on file load.
 
-![PreloadJS](http://createjs.com/docs/preloadjs/assets/docs-icon-PreloadJS.png)
+<h3 align = "center"><a href = "https://github.com/CreateJS/PreloadJS"> <img height = "200px" src = "http://createjs.com/docs/preloadjs/assets/docs-icon-PreloadJS.png"> </a> </h3>
 
 PreloadJS is a library to make working with asset preloading easier. It provides a consistent API for loading different file types, automatic detection of XHR (XMLHttpRequest) availability with a fallback to tag-base loading, composite progress events, and a plugin model to assist with preloading in other libraries such as SoundJS.
 
@@ -97,7 +91,6 @@ Below is an example of how PreloadJS is used
         document.body.appendChild(event.result);    }
 
 The example above will preload `image.png` and then execute appendChild as soon as it is loaded.
-
 
 ##### **RATING** :sparkles: :sparkles: :sparkles: :sparkles: :boom:
 Overall, the Create.JS suite is a powerful library collection that offers a lot of tools that anyone interested in building an interactive program should use. I'd give it full **five** :sparkles:, but as a beginner to JavaScript (and code in general), the code is quite intimidating.
