@@ -21,7 +21,7 @@ However, libraries aren't always what you're looking for (or you may not be look
 
 <h3 align = "center"><a href = "http://www.createjs.com/"> <img height="400px" src="http://createjs.com/assets/images/svg/createjs-logo-vertical-gray-darker.svg"> </a> </h3>
 
-Create.js is a collection of libraries and tools to build rich interactive web content. The main products of CreateJS are the following:
+Create.js is a collection of libraries and tools to build rich interactive web content. The products of CreateJS are the following:
 
 - **[EaselJS](https://github.com/CreateJS/EaselJS)** - *a library that can make working with the HTML5 Canvas element easier*
 - **[TweenJS](https://github.com/CreateJS/TweenJS)** - *a simple but powerful animation library*
@@ -103,8 +103,6 @@ The example above will preload `image.png` and then execute appendChild as soon 
 Overall, the Create.JS suite is a powerful library collection that offers a lot of tools that anyone interested in building an interactive program should use. I'd give it full **five** :sparkles:, but as a beginner to JavaScript (and code in general), the code is quite intimidating.
 
 <br/>
-----
-----
 <br/>
 
 <h3 align = "center"><a href = "http://leafletjs.com/index.html"> <img height = "200px" src = "http://leafletjs.com/docs/images/logo.png"> </a> </h3>
