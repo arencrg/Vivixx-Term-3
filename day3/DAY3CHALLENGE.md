@@ -13,11 +13,9 @@ Libraries are pre-packaged codes that are called by the application to handle di
 However, libraries aren't always what you're looking for (or you may not be looking at the right library to do what you want it to do), and sometimes they can break your code — if there's a bug within the library, it might be difficult to locate and fix.
 
 <br/>
------
------
 <br/>
 
-### Okay, libraries sound cool and I think I need to use one. Any suggestions?
+<h3 align="center"> Okay, libraries sound cool and I think I need to use one. Any suggestions? </h3>
 
 <br/>
 
@@ -37,7 +35,7 @@ CreateJS is also sponsored by Adobe, Microsoft, mozilla, and gskinner.
 
 <br/>
 ------
-<h3 align = "center"><a href = "https://github.com/CreateJS/EaselJS"> <img height = "150px" src = "http://www.createjs.com/docs/easeljs/assets/docs-icon-EaselJS.png"> </a> </h3>
+<h3 align = "center"><a href = "https://github.com/CreateJS/EaselJS"> <img height = "100px" src = "http://www.createjs.com/docs/easeljs/assets/docs-icon-EaselJS.png"> </a> </h3>
 
 EaselJS is a library for building high-performance interactive 2D content in HTML5. It provides a feature-rich display list to allow you to manipulate and animate graphics. It also provides a robust interactive model for mouse and touch interactions. It is used in building games, generative art, ads, data visualization, and other highly graphical experiences.
 
@@ -52,7 +50,7 @@ Below is a quick example of how to use the EaselJS:
 The example above will simply build a red square `shape` on `stage`, which is a Stage on the HTML canvas `myCanvas`.
 
 
-<h3 align = "center"><a href = "https://github.com/CreateJS/TweenJS"> <img height = "150px" src = "http://createjs.com/docs/tweenjs/assets/docs-icon-TweenJS.png"> </a> </h3>
+<h3 align = "center"><a href = "https://github.com/CreateJS/TweenJS"> <img height = "100px" src = "http://createjs.com/docs/tweenjs/assets/docs-icon-TweenJS.png"> </a> </h3>
 
 The TweenJS API makes it easy to create complex tweens by chaining commands.
 
@@ -69,7 +67,7 @@ The example above will create a new tween instance that:
 - tweens the target's alpha to 0 over 1s & sets its visible to false
 - calls the onComplete function
 
-<h3 align = "center"><a href = "https://github.com/CreateJS/SoundJS"> <img height = "150px" src = "http://createjs.com/docs/soundjs/assets/docs-icon-SoundJS.png"> </a> </h3>
+<h3 align = "center"><a href = "https://github.com/CreateJS/SoundJS"> <img height = "100px" src = "http://createjs.com/docs/soundjs/assets/docs-icon-SoundJS.png"> </a> </h3>
 
 SoundJS is a library to make working with audio on the web easier. It provides a consistent API for playing audio in different browsers. A mechanism has been provided for easily tying in audio preloading to PreloadJS.
 
@@ -85,7 +83,7 @@ Below is a simple example:
 
 The example above will install audio playback Plugins, register `mySound.ogg`, and control the volume to play a song on file load.
 
-<h3 align = "center"><a href = "https://github.com/CreateJS/PreloadJS"> <img height = "150px" src = "http://createjs.com/docs/preloadjs/assets/docs-icon-PreloadJS.png"> </a> </h3>
+<h3 align = "center"><a href = "https://github.com/CreateJS/PreloadJS"> <img height = "100px" src = "http://createjs.com/docs/preloadjs/assets/docs-icon-PreloadJS.png"> </a> </h3>
 
 PreloadJS is a library to make working with asset preloading easier. It provides a consistent API for loading different file types, automatic detection of XHR (XMLHttpRequest) availability with a fallback to tag-base loading, composite progress events, and a plugin model to assist with preloading in other libraries such as SoundJS.
 
@@ -109,7 +107,7 @@ Overall, the Create.JS suite is a powerful library collection that offers a lot 
 ----
 <br/>
 
-<h3 align = "center"><a href = "http://leafletjs.com/index.html"> <img height = "280px" src = "http://leafletjs.com/docs/images/logo.png"> </a> </h3>
+<h3 align = "center"><a href = "http://leafletjs.com/index.html"> <img height = "200px" src = "http://leafletjs.com/docs/images/logo.png"> </a> </h3>
 
 Leaflet is the leading open-source JavaScript library for mobile-friendly interactive maps. Weighing just about 38 KB of JS, it has all the mapping features most developers ever need.
 
