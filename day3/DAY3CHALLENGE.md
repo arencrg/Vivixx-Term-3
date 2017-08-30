@@ -1,16 +1,8 @@
->Create a markdown page that shows the differences in atleast 3 different js libraries
-1.1. Display Logos and description in your own words
-1.2. Show Code examples
-1.3. Best Use Cases - when is it best used
-1.4. "Personal" Ratings for each  
->Discuss the differences between a library and a framework
->MOST IMPORTANT = store all the code samples in a single github repository - use a README.md file (use http://dillinger.io/ for ease)
-
 # What is the difference between Frameworks and Libraries?
 
 ### Frameworks
 
-Frameworks are application skeletons that sometimes have their own specific syntaxes and quirks, but they already have the common application functionalities expected to perform basic tasks. It is the foundation of the code we're writing — all we have to do is arrange everything to get our project up and running, and then call libraries for more specific tasks and bonus features. 
+Frameworks are application skeletons that sometimes have their own specific syntaxes and quirks, but they already have the common application functionalities expected to perform basic tasks. It is the foundation of the code we're writing — all we have to do is arrange everything to get our project up and running, and then call libraries for more specific tasks and bonus features.
 
 ### Libraries
 
@@ -20,24 +12,23 @@ However, libraries aren't always what you're looking for (or you may not be look
 
 ------
 
-#### Okay, libraries sound cool and I think I need to use one. Any suggestions?
-
-#
+# Okay, libraries sound cool and I think I need to use one. Any suggestions?
 
 ![Create.js Logo](http://createjs.com/assets/images/svg/createjs-logo-vertical-gray-darker.svg)
+<h3 align = "center"><a href = "http://www.createjs.com/"> <img height="200px" src="http://createjs.com/assets/images/svg/createjs-logo-vertical-gray-darker.svg"> </a> </h3>
 
 #### 1. [Create.js](http://www.createjs.com/)
 
 Create.js is a collection of libraries and tools to build rich interactive web content. The main products of CreateJS are the following:
 
-- **[EaselJS](https://github.com/CreateJS/EaselJS)** *(a library that has tools which make working with the HTML5 Canvas element easier)*
-- **[TweenJS](https://github.com/CreateJS/TweenJS)** *(a simple but powerful animation library)*
-- **[SoundJS](https://github.com/CreateJS/SoundJS)** *(a library that has a lot of tools to work on audio with)*
-- **[PreloadJS](https://github.com/CreateJS/PreloadJS)** *(a library for preloading assets).*
+- **[EaselJS](https://github.com/CreateJS/EaselJS)** - *a library that can make working with the HTML5 Canvas element easier*
+- **[TweenJS](https://github.com/CreateJS/TweenJS)** - *a simple but powerful animation library*
+- **[SoundJS](https://github.com/CreateJS/SoundJS)** - *a library that has a lot of tools to work on audio with*
+- **[PreloadJS](https://github.com/CreateJS/PreloadJS)** - *a library for preloading assets*
 
-CreateJS is sponsored by Adobe, Microsoft, mozilla, and gskinner.
+CreateJS is also sponsored by Adobe, Microsoft, mozilla, and gskinner.
 
-##### Sounds cool! How do I start?
+##### Got it. How do I start?
 `<script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>`
 
 
@@ -55,10 +46,9 @@ Below is a quick example of how to use the EaselJS:
     shape.graphics.beginFill('red').drawRect(0, 0, 120, 120);
     stage.addChild(shape);
     stage.update();
-    
+
 The example above will simply build a red square `shape` on `stage`, which is a Stage on the HTML canvas `myCanvas`.
 
-#
 
 ![TweenJS](http://createjs.com/docs/tweenjs/assets/docs-icon-TweenJS.png)
 
@@ -77,7 +67,6 @@ The example above will create a new tween instance that:
 - tweens the target's alpha to 0 over 1s & sets its visible to false
 - calls the onComplete function
 
-#
 
 ![SoundJS](http://createjs.com/docs/soundjs/assets/docs-icon-SoundJS.png)
 
@@ -95,8 +84,6 @@ Below is a simple example:
 
 The example above will install audio playback Plugins, register `mySound.ogg`, and control the volume to play a song on file load.
 
-#
-
 ![PreloadJS](http://createjs.com/docs/preloadjs/assets/docs-icon-PreloadJS.png)
 
 PreloadJS is a library to make working with asset preloading easier. It provides a consistent API for loading different file types, automatic detection of XHR (XMLHttpRequest) availability with a fallback to tag-base loading, composite progress events, and a plugin model to assist with preloading in other libraries such as SoundJS.
@@ -111,14 +98,21 @@ Below is an example of how PreloadJS is used
 
 The example above will preload `image.png` and then execute appendChild as soon as it is loaded.
 
-##### Summary:
+
+##### **RATING** :sparkles: :sparkles: :sparkles: :sparkles: :boom:
+Overall, the Create.JS suite is a powerful library collection that offers a lot of tools that anyone interested in building an interactive program should use. I'd give it full **five** :sparkles:, but as a beginner to JavaScript (and code in general), the code is quite intimidating.
+
+
+---
+----
+
 #
-> Overall, the Create.JS suite is a powerful library collection that offers a lot of tools that anyone interested in building an interactive program should use.
-> I give it :sparkles: :sparkles: :sparkles: :sparkles: :sparkles:
 
+![Leaflet.js](http://leafletjs.com/docs/images/logo.png)
+#### 2. Leaflet.js
 
-#### 2. React
+Leaflet is the leading open-source JavaScript library for mobile-friendly interactive maps. Weighing just about 38 KB of JS, it has all the mapping features most developers ever need.
 
+Leaflet is designed with simplicity, performance and usability in mind. It works efficiently across all major desktop and mobile platforms, can be extended with lots of plugins, has a beautiful, easy to use and well-documented API and a simple, readable source code that is a joy to contribute to.
 
-#### 3. Polymer 
-
+#### 3. Polymer
