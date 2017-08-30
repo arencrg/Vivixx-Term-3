@@ -104,11 +104,121 @@ Overall, the Create.JS suite is a powerful library collection that offers a lot 
 
 <br/>
 <br/>
+<br/>
 
 <h3 align = "center"><a href = "http://leafletjs.com/index.html"> <img height = "200px" src = "http://leafletjs.com/docs/images/logo.png"> </a> </h3>
 
-Leaflet is the leading open-source JavaScript library for mobile-friendly interactive maps. Weighing just about 38 KB of JS, it has all the mapping features most developers ever need.
+Leaflet is a JavaScript library for mobile-friendly interactive maps with all the mapping features most developers ever need. It is light-weight and has great documentation, plus it works efficiently across all major platforms. If you check out the API, there are also a lot of plugins, tutorials, and easy-to-read source code.
 
-Leaflet is designed with simplicity, performance and usability in mind. It works efficiently across all major desktop and mobile platforms, can be extended with lots of plugins, has a beautiful, easy to use and well-documented API and a simple, readable source code that is a joy to contribute to.
+##### Got it. How do I start?
 
-#### 3. Polymer
+1. Include Leaflet CSS file in the head section of your document:
+
+        <link rel = "stylesheet" href = "https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
+        integrity = "sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
+        crossorigin = ""/>
+
+2.  Include Leaflet JavaScript file after Leaflet’s CSS:
+
+        <script src = "https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
+        integrity = "sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
+        crossorigin = ""></script>
+
+3. Put a div element with a certain id where you want your map to be:
+
+        <div id="mapid"></div>
+
+4. Make sure the map container has a defined height, for example by setting it in CSS:
+
+        #mapid { height: 180px; }
+
+Now you’re ready to initialize the map and do some stuff with it.
+
+##### How do I initialize the map then?
+
+1. The first step is to initialize the map and set its view to the coordinates (latitude, longitude) and then the zoom level.
+
+        var mymap = L.map('mapid').setView([lat, long], zoomlevel);
+
+By default, all mouse and touch interactions on the map are enabled, and it has zoom and attribution controls.
+
+2. Next we need to add a tile layer to add to our map. [MapBox](https://www.mapbox.com/) is a popular location data platform for mobile and web applications that can help you add location features like maps, search, and navigation, so we're using their MapBox Streets tile layer. Creating a tile layer usually involves setting the URL template for the tile images, the attribution text and the maximum zoom level of the layer.
+
+            L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+            maxZoom: 18,
+            id: 'mapbox.streets',
+            accessToken: 'your.mapbox.access.token'
+            }).addTo(mymap);
+
+3. Make sure all the code is called after the div and leaflet.js inclusion.
+
+##### That's it! Now we can customize our map!
+
+<h5> Markers, circles, and polygons </h5>
+
+Below is an example of how to add a marker:
+
+    var marker = L.marker([51.5, -0.09]).addTo(mymap);
+
+Adding a circle is the same (except for specifying the radius in meters as a second argument), but lets you control how it looks by passing options as the last argument when creating the object:
+
+    var circle = L.circle([51.508, -0.11], {
+    color: 'red',
+    fillColor: '#f03',
+    fillOpacity: 0.5,
+    radius: 500
+    }).addTo(mymap);
+
+Adding a polygon is as easy:
+
+    var polygon = L.polygon([
+        [51.509, -0.08],
+        [51.503, -0.06],
+        [51.51, -0.047]
+    ]).addTo(mymap);
+
+<h5>Popups</h5>
+
+Popups are usually used when you want to attach some information to a particular object on a map. Leaflet has a very handy shortcut for this:
+
+    marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
+    circle.bindPopup("I am a circle.");
+    polygon.bindPopup("I am a polygon.");
+
+The bindPopup method attaches a popup with the specified HTML content to your marker so the popup appears when you click on the object, and the openPopup method (for markers only) immediately opens the attached popup.
+
+You can also use popups as layers (when you need something more than attaching a popup to an object):
+
+    var popup = L.popup()
+        .setLatLng([51.5, -0.09])
+        .setContent("I am a standalone popup.")
+        .openOn(mymap);
+
+Here we use openOn instead of addTo because it handles automatic closing of a previously opened popup when opening a new one which is good for usability.
+
+<h5>Events</h5>
+
+Every time something happens in Leaflet, e.g. user clicks on a marker or map zoom changes, the corresponding object sends an event which you can subscribe to with a function.
+
+Each object has its own set of events. The first argument of the listener function is an event object — it contains useful information about the event that happened. The example below tells us that when a user clicks on the map, a popup shows us the coordinates of the click.
+
+    var popup = L.popup();
+
+    function onMapClick(e) {
+        popup
+            .setLatLng(e.latlng)
+            .setContent("You clicked the map at " + e.latlng.toString())
+            .openOn(mymap);
+    }
+
+    mymap.on('click', onMapClick);
+
+----
+
+### **RATING** :sparkles: :sparkles: :sparkles: :sparkles: :sparkles:
+I gave Leaflet complete sparkles because I think it's easy to use and lightweight, has the most basic functionalities, and performs really well with MapBox.
+<br/>
+<br/>
+<br/>
+
+<h3 align = "center"><a href = ""> <img height = "200px" src = ""> </a> </h3>
