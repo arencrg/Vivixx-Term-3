@@ -8,6 +8,10 @@ const server = HTTP.createServer((req, res) => {
       const urlComponents = URL.parse(req.url);
       switch (urlComponents.pathname) { //which route shall we handle?
 
+        case '/':
+          res.end('Good job! You just wrote your first Node server!')
+        break;
+
       case '/example.json':
         jsonResponse(res, { //JSON response
               example: true,

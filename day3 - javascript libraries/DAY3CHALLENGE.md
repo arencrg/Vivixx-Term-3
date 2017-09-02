@@ -24,8 +24,7 @@ Libraries are pre-packaged codes that are called by the application to handle di
 
 However, libraries aren't always what you're looking for (or you may not be looking at the right library to do what you want it to do), and sometimes they can break your code — if there's a bug within the library, it might be difficult to locate and fix.
 
-<br/>
-<br/>
+<br/><br/>
 
 <h3 align="center"> Okay, libraries sound cool and I think I need to use one. Any suggestions? </h3>
 

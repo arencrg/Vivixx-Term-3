@@ -40,9 +40,9 @@ app.post('/login', function (req, res) {
   		if (users[i].email == user && users[i].pass == pass) {
   			'Login Success'
             res.cookie('logged',users[i].email);
-            console.log('cookie have created successfully');
+            console.log('cookie has been created successfully');
             res.cookie('money',users[i].money);
-            console.log('cookie have created successfully');
+            console.log('cookie has been created successfully');
             cookie = req.cookies.logged;
   			res.redirect('/myaccount');
   			break;
