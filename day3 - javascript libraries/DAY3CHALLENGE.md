@@ -1,3 +1,15 @@
+The challenge for the day was:
+
+1. Discuss the differences between a library and a framework
+
+2. Create a markdown page that shows the differences in at least 3 different JS libraries with personal ratings for each
+
+3. MOST IMPORTANT = store all the code samples in a single github repository - use a README.md file (use http://dillinger.io/ for ease)
+
+-----------------------
+
+-----------------------
+
 # What is the difference between Frameworks and Libraries?
 
 ## Frameworks
@@ -8,7 +20,7 @@ Frameworks are application skeletons that sometimes have their own specific synt
 
 ## Libraries
 
-Libraries are pre-packaged codes that are called by the application to handle different types of data, perform HTML DOM manipulation, react to specific events, etc. Basically, what libraries do is they shorten code time by providing ready-to-implement functions or methods created by awesome devs all over the world so you don't have to write hundreds of lines of code by yourself. This means you don't have to think about every little detail and instead you can focus on creating your next big app or program using the frameworks available.
+Libraries are pre-packaged codes that are called by the application to handle different types of data, perform HTML DOM manipulation, react to specific events, etc. Basically, what libraries do is they shorten code time by providing ready-to-implement functions or methods created by awesome devs all over the world so you don't have to write dozens of lines of code by yourself. This means you don't have to think about every little detail and instead you can focus on creating your next big app or program using the frameworks available.
 
 However, libraries aren't always what you're looking for (or you may not be looking at the right library to do what you want it to do), and sometimes they can break your code — if there's a bug within the library, it might be difficult to locate and fix.
 
@@ -30,14 +42,15 @@ Create.js is a collection of libraries and tools to build rich interactive web c
 
 CreateJS is also sponsored by Adobe, Microsoft, mozilla, and gskinner.
 
-##### Got it. How do I start?
-`<script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>`
+### Got it. How do I start?
+
+    <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
 
 <br/>
 ------
 <h3 align = "center"><a href = "https://github.com/CreateJS/EaselJS"> <img height = "100px" src = "http://www.createjs.com/docs/easeljs/assets/docs-icon-EaselJS.png"> </a> </h3>
 
-EaselJS is a library for building high-performance interactive 2D content in HTML5. It provides a feature-rich display list to allow you to manipulate and animate graphics. It also provides a robust interactive model for mouse and touch interactions. It is used in building games, generative art, ads, data visualization, and other highly graphical experiences.
+EaselJS is a library for building interactive 2D content in HTML5. It provides a feature-rich display list to allow you to manipulate and animate graphics. It also provides a robust interactive model for mouse and touch interactions. It is used in building games, generative art, ads, data visualization, and other highly graphical experiences.
 
 Below is a quick example of how to use the EaselJS:
 
@@ -57,14 +70,13 @@ The TweenJS API makes it easy to create complex tweens by chaining commands.
     var tween = createjs.Tween.get(myTarget)
         .to({x:300},400)
         .set({label:"hello!"})
-        .wait(500).to({alpha:0,visible:false},1000)
+        .wait(500).to({visible:false},1000)
         .call(onComplete);
 
 The example above will create a new tween instance that:
 - tweens the target to an x value of 300 over 400ms
 - sets its label to "hello!"
-- waits 500 ms
-- tweens the target's alpha to 0 over 1s & sets its visible to false
+- waits 500 ms before setting its visible to false in a second
 - calls the onComplete function
 
 <h3 align = "center"><a href = "https://github.com/CreateJS/SoundJS"> <img height = "100px" src = "http://createjs.com/docs/soundjs/assets/docs-icon-SoundJS.png"> </a> </h3>
@@ -79,9 +91,10 @@ Below is a simple example:
     function loadHandler(event) {
         var instance = createjs.Sound.play("sound");
         instance.on("complete", this.handleComplete, this);
-        instance.volume = 0.5      }
+        instance.volume = 0.5
+        }
 
-The example above will install audio playback Plugins, register `mySound.ogg`, and control the volume to play a song on file load.
+The example above will install audio playback Plugins, register `mySound.ogg`, and control the volume to play it on file load.
 
 <h3 align = "center"><a href = "https://github.com/CreateJS/PreloadJS"> <img height = "100px" src = "http://createjs.com/docs/preloadjs/assets/docs-icon-PreloadJS.png"> </a> </h3>
 
@@ -99,7 +112,7 @@ The example above will preload `image.png` and then execute appendChild as soon 
 
 ----
 
-### **RATING** :sparkles: :sparkles: :sparkles: :sparkles: :boom:
+## **RATING** :sparkles: :sparkles: :sparkles: :sparkles: :boom:
 Overall, the Create.JS suite is a powerful library collection that offers a lot of tools that anyone interested in building an interactive program should use. I'd give it full **five** :sparkles:, but as a beginner to JavaScript (and code in general), the code is quite intimidating.
 
 <br/>
@@ -110,7 +123,7 @@ Overall, the Create.JS suite is a powerful library collection that offers a lot 
 
 Leaflet is a JavaScript library for mobile-friendly interactive maps with all the mapping features most developers ever need. It is light-weight and has great documentation, plus it works efficiently across all major platforms. If you check out the API, there are also a lot of plugins, tutorials, and easy-to-read source code.
 
-##### Got it. How do I start?
+### Got it. How do I start?
 
 1. Include Leaflet CSS file in the head section of your document:
 
@@ -132,15 +145,13 @@ Leaflet is a JavaScript library for mobile-friendly interactive maps with all th
 
         #mapid { height: 180px; }
 
-Now you’re ready to initialize the map and do some stuff with it.
+Now you’re ready to initialize the map and do stuff with it.
 
-##### How do I initialize the map then?
+### How do I initialize the map then?
 
 1. The first step is to initialize the map and set its view to the coordinates (latitude, longitude) and then the zoom level.
 
         var mymap = L.map('mapid').setView([lat, long], zoomlevel);
-
-By default, all mouse and touch interactions on the map are enabled, and it has zoom and attribution controls.
 
 2. Next we need to add a tile layer to add to our map. [MapBox](https://www.mapbox.com/) is a popular location data platform for mobile and web applications that can help you add location features like maps, search, and navigation, so we're using their MapBox Streets tile layer. Creating a tile layer usually involves setting the URL template for the tile images, the attribution text and the maximum zoom level of the layer.
 
@@ -152,9 +163,9 @@ By default, all mouse and touch interactions on the map are enabled, and it has 
 
 3. Make sure all the code is called after the div and leaflet.js inclusion.
 
-##### That's it! Now we can customize our map!
+### That's it! Now we can customize our map!
 
-<h5> Markers, circles, and polygons </h5>
+#### **Markers, circles, and polygons**
 
 Below is an example of how to add a marker:
 
@@ -177,7 +188,7 @@ Adding a polygon is as easy:
         [51.51, -0.047]
     ]).addTo(mymap);
 
-<h5>Popups</h5>
+#### **Popups**
 
 Popups are usually used when you want to attach some information to a particular object on a map. Leaflet has a very handy shortcut for this:
 
@@ -196,7 +207,7 @@ You can also use popups as layers (when you need something more than attaching a
 
 Here we use openOn instead of addTo because it handles automatic closing of a previously opened popup when opening a new one which is good for usability.
 
-<h5>Events</h5>
+#### **Events**
 
 Every time something happens in Leaflet, e.g. user clicks on a marker or map zoom changes, the corresponding object sends an event which you can subscribe to with a function.
 
@@ -215,7 +226,7 @@ Each object has its own set of events. The first argument of the listener functi
 
 ----
 
-### **RATING** :sparkles: :sparkles: :sparkles: :sparkles: :sparkles:
+## **RATING** :sparkles: :sparkles: :sparkles: :sparkles: :sparkles:
 I gave Leaflet complete sparkles because I think it's easy to use and lightweight, has the most basic functionalities, and performs really well with MapBox.
 <br/>
 <br/>

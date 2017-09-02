@@ -11,17 +11,21 @@
   <form>
   <input type="text" id="str"/><br/>
   <input type="button" onclick="countVowels()" value = "Remove the vowels!"/>
-  <p id = "resultone"></p>
-  <p id = "resulttwo"></p>
+  <br/>
+  <span id = "howmany"></span>
+  <span id = "resultone"></span>
+  <span id = "resulttwo"></span>
   </form>
 
 <script>
 function countVowels()
 {
-  x = document.getElementById("str").innerHTML.length
-  y = document.getElementById("str").innerHTML.replace(/[aeiou]/gi, "").length;
-  z = document.getElementById("str").innerHTML.replace(/[aeiou]/gi, "");
-  document.getElementById("resultone").innerHTML = x-y;
+  str = document.getElementById("str").innerHTML;
+  var x = str.length;
+  var y = str.replace(/[^aeiou]/gi, "").length;
+  z = document.getElementById("str").innerHTML.replace(/[^aeiou]/gi, "");
+  document.getElementById("howmany").innerHTML = x;
+  document.getElementById("resultone").innerHTML = y-z;
   document.getElementById("resulttwo").innerHTML = z;
 }
 </script>
