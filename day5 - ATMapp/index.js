@@ -4,6 +4,8 @@ const redirect = require('express-redirect');
 const path = require('path');
 const bodyParser = require('body-parser');
 
+const { jsonResponse } = require('./utils'); //use the exported function
+
 const app = express();
 var cookieParser = require('cookie-parser')
 app.use(cookieParser())
@@ -86,6 +88,13 @@ app.get('/myaccount', function(req, res, next){
 		res.sendFile(myHTML('myaccount'));
   		console.log('My Account Page');
 	}
+});
+
+app.get('/aren.json', function(req, res, next){
+   jsonResponse(res, { //JSON response
+            owner: 'Aren Cariaga',
+            date_completed: '04 Sept 2017',
+      });
 });
 
 app.listen(80, function() {
