@@ -12,6 +12,7 @@ router.use(bodyParser.urlencoded({extended: true}))
       res.render('index', {
         title: "Bren's Guitars (that I know of)"});
         console.log('Home Page');
+
     });
 
 
