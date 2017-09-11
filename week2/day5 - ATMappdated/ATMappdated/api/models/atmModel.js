@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 
 var clientAccountSchema = mongoose.Schema({
-  accountId: String,
+  _id: String,
   name: String,
   email: String,
   password: String,

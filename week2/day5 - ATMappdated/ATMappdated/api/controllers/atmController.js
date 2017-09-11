@@ -5,6 +5,7 @@ exports.showAllAccounts = function(req, res) {
   ATMaccount.find({}, function(err, account) {
     if (err)
       res.send(err);
+      
     res.json(account);
   });
 };

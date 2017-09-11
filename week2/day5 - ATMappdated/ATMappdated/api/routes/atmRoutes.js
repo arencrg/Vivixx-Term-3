@@ -9,7 +9,7 @@ module.exports = function(app) {
   app.route('/newaccount')
     .post(ATMapp.createNewAccount);
 
-  app.route('/:accountId')
+  app.route('/:_id')
     .get(ATMapp.showOneAccount)
     .post(ATMapp.updateOneAccount)
     .delete(ATMapp.deleteOneAccount);
