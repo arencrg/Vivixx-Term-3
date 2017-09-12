@@ -3,7 +3,6 @@ import logo from './logo.svg';
 import './App.css';
 
 class Account extends Component {
-
 constructor(props) {
   super(props);
   this.state = {name:"Aren", balance: 100000};
@@ -25,11 +24,10 @@ deposit(e) {
 
 render() {
   return (
-      <div>
+      <div className="container">
       <h1>{this.state.name} has ${this.state.balance}</h1>
       <form>
-          <input type="text" ref="amount" placeholder="Input Amount Here"></input>
-          <br/><br/>
+          <input type="text" ref="amount" placeholder="Input Amount Here"></input> &nbsp;
           <button onClick={this.withdraw} className="btn btn-primary">Withdraw</button>&nbsp;<button onClick={this.deposit} className="btn btn-primary">Deposit</button>
       </form>
     </div>
