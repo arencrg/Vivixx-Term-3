@@ -17,7 +17,7 @@ restoYamashita : [  {code: 1, name: "Shoyu Ramen (soy sauce-based)", price: 120 
       {code: 7, name: "Miso Corn Butter Ramen", price: 200 },
       {code: 8, name: "Cantonese Noodles", price: 200 },
       {code: 9, name: "Yakisoba", price: 170 },
-      {code: 10, name: "Cold Ramen 'Hiyashi Chuka'", price: 190 },
+      {code: 10, name: "Cold Ramen 'Hiyashi Chuka'", price: 190},
       {code: 11, name: "Chicken Curry", price: 160 },
       {code: 12, name: "Karaage Curry (fried chicken)", price: 180 },
       {code: 13, name: "Shrimp Fried Curry", price: 180 },
