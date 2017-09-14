@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Play me, play me!</title>
+  <link rel="stylesheet" href="drumclockstyle.css">
+</head>
+<body>
+<div id="time">
+  <div class="clock">
+      <div class="hand hour-hand"></div>
+      <div class="hand min-hand"></div>
+      <div class="hand second-hand"></div>
+  </div>
+</div>
+
+<div class "row" id = "play">
+  <div class="keys">
+    <div data-key="65" class="key">
+      <kbd>A</kbd><br/>
+      <img src="assets/icon_troop.png" onclick="playSound()" class="troops"><br/>
+      <span class="sound">I've got a bad feeling about this</span>
+    </div>
+
+    <div data-key="83" class="key">
+      <kbd>S</kbd><br/>
+      <img src="assets/icon_troop.png" onclick="playSound()" class="troops"><br/>
+      <span class="sound">Chewy</span>
+    </div>
+
+    <div data-key="68" class="key">
+      <kbd>D</kbd><br/>
+      <img src="assets/icon_troop.png" onclick="playSound()" class="troops"><br/>
+      <span class="sound">A Great Disturbance</span>
+    </div>
+
+    <div data-key="70" class="key">
+      <kbd>F</kbd><br/>
+      <img src="assets/icon_troop.png" onclick="playSound()" class="troops"><br/>
+      <span class="sound">Jabba</span>
+    </div>
+
+    <div data-key="71" class="key">
+      <kbd>G</kbd><br/>
+      <img src="assets/icon_troop.png" onclick="playSound()" class="troops"><br/>
+      <span class="sound">Your Lack of Faith</span>
+    </div>
+
+    <div data-key="72" class="key">
+      <kbd>H</kbd><br/>
+      <img src="assets/icon_troop.png" onclick="playSound()" class="troops"><br/>
+      <span class="sound">Nerfherder!</span>
+    </div>
+
+    <div data-key="74" class="key">
+      <kbd>J</kbd><br/>
+      <img src="assets/icon_troop.png" onclick="playSound()" class="troops"><br/>
+      <span class="sound">R2-D2</span>
+    </div>
+
+    <div data-key="75" class="key">
+      <kbd>K</kbd><br/>
+      <img src="assets/icon_troop.png" onclick="playSound()" class="troops"><br/>
+      <span class="sound">It's a Trap!</span>
+    </div>
+
+    <div data-key="76" class="key">
+      <kbd>L</kbd><br/>
+      <img src="assets/icon_troop.png" onclick="playSound()" class="troops"><br/>
+      <span class="sound">I Am Your Father</span>
+    </div>
+
+  </div>
+</div>
+
+  <audio class="audio" data-key="65" src="assets/bad_feeling.wav"></audio>
+  <audio class="audio" data-key="83" src="assets/chewy.wav"></audio>
+  <audio class="audio" data-key="68" src="assets/disturbance.wav"></audio>
+  <audio class="audio" data-key="70" src="assets/jabba.wav"></audio>
+  <audio class="audio" data-key="71" src="assets/lack_of_faith.wav"></audio>
+  <audio class="audio" data-key="72" src="assets/nerfherder.wav"></audio>
+  <audio class="audio" data-key="74" src="assets/r2-d2.wav"></audio>
+  <audio class="audio" data-key="75" src="assets/trap.wav"></audio>
+  <audio class="audio" data-key="76" src="assets/your_father.wav"></audio>
+
+    <script>
+      function removeTransition(e) {
+        if (e.propertyName !== 'transform') return;
+        e.target.classList.remove('playing');
+      }
+      function playSound(e) {
+        const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+        const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
+        if (!audio) return;
+        key.classList.add('playing');
+        audio.currentTime = 0;
+        audio.play();
+      }
+      const keys = Array.from(document.querySelectorAll('.key'));
+      keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+      window.addEventListener('keydown', playSound);
+
+
+
+      const secondHand = document.querySelector('.second-hand');
+      const minsHand = document.querySelector('.min-hand');
+      const hourHand = document.querySelector('.hour-hand');
+      function setDate() {
+        const now = new Date();
+        const seconds = now.getSeconds();
+        const secondsDegrees = ((seconds / 60) * 360) + 90;
+        secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
+        const mins = now.getMinutes();
+        const minsDegrees = ((mins / 60) * 360) + ((seconds/60)*6) + 90;
+        minsHand.style.transform = `rotate(${minsDegrees}deg)`;
+        const hour = now.getHours();
+        const hourDegrees = ((hour / 12) * 360) + ((mins/60)*30) + 90;
+        hourHand.style.transform = `rotate(${hourDegrees}deg)`;
+      }
+      setInterval(setDate, 1000);
+      setDate();
+
+    </script>
+
+
+
+</body>
+</html>

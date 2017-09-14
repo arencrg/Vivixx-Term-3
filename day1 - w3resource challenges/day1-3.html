@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exercise 3</title>
+</head>
+<body>
+  <h3>Javascript Day 1, Exercise 3: Capitalization Program</h3>
+
+  <form>
+  <input type="text" id="inputstr" placeholder="Write anything to capitalize it!"/>
+  <input type="button" onclick="capitalizeMe()" value = "Capitalize"/>
+  <p id="result"> </p>
+  </form>
+
+<script>
+function capitalizeMe() {
+
+    str = document.getElementById("inputstr").innerHTML.split(" ");
+    return str.toString().replace(/\w\S*/g, function(str){return str.charAt(0).toUpperCase() + str.substr(1).toLowerCase();});
+    document.getElementById("result").innerHTML = str.join(" ");
+}
+
+</script>
+</body>
+</html>
